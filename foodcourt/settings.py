@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'UpdateSeats.apps.UpdateseatsConfig',
     'Info.apps.InfoConfig',
     'StoreDetails.apps.StoredetailsConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -50,6 +51,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'foodcourt.urls'
