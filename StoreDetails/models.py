@@ -21,3 +21,8 @@ class FoodOrderQueueModels(models.Model):
 
 	def __str__(self):
 		return "Food queue - {0}".format(self.food_menu.food_name)
+
+class FifoServiceQueue(models.Model):
+	store_id 		= models.ForeignKey(StoreModels, on_delete=models.CASCADE, default=None)
+	food_menu 		= models.ForeignKey(FoodMenuModels, on_delete=models.CASCADE, default=None)
+	time_stamp 		= models.DateTimeField(auto_now=False)

@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import View
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from UpdateSeats.models import  *
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 import json
 	
-# Create your views here.
-class SeatAvailability(View):
+class UpdateSeatOccupancy(View):
 	@method_decorator(csrf_exempt)
 	def dispatch(self, *args, **kwargs):
 		return super(SeatAvailability, self).dispatch(*args, **kwargs)

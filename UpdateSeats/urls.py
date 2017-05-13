@@ -4,5 +4,5 @@ from UpdateSeats.views import *
 
 # update
 urlpatterns = [
-	url(r'^seat-occupancy/$', SeatAvailability.as_view(), name="seat-availability"),
+	url(r'^seat-occupancy/$', UpdateSeatOccupancy.as_view(), name="seat-occupancy"),
 ]

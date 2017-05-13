@@ -14,3 +14,6 @@ class FoodMenuModelsAdmin(admin.ModelAdmin):
 class FoodOrderQueueModelsAdmin(admin.ModelAdmin):
 	pass
 
+@admin.register(FifoServiceQueue)
+class FifoServiceQueueAdmin(admin.ModelAdmin):
+	pass
