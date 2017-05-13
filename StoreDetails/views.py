@@ -45,7 +45,8 @@ class AddNewOrdersToQueue(View):
 			store 			= StoreModels.objects.filter(pk=kwargs['store_id']).first()
 			food_menu 		= store.foodmenumodels_set.filter(pk=kwargs['food_menu_id']).first()
 			time_now 		= timezone.now()
-			FifoServiceQueue.objects.create(store_id=store, food_menu=food_menu, time_stamp=time_now)
-			return HttpResponse("Added new item to queue")
+			obj_handle 		= FifoServiceQueue.objects.create(store_id=store, food_menu=food_menu, time_stamp=time_now)
+			json_dict 		= {"order_id":obj_handle.pk}
+			return JsonResponse(json_dict)
 		except Exception as e:
 			return HttpResponse(e)
