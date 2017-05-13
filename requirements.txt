@@ -1,0 +1,8 @@
+dj-database-url==0.4.1
+Django==1.9.8
+gunicorn==19.6.0
+pycrypto==2.6.1
+psycopg2==2.6.2
+whitenoise==3.2
+django-braces==1.10.0
+django-storages==1.5.2
