@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 import json
-
+	
 # Create your views here.
 class SeatAvailability(View):
 	@method_decorator(csrf_exempt)

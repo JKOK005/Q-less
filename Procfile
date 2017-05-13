@@ -1,1 +1,1 @@
-web: gunicorn lifeplanters.wsgi --log-file -
+web: gunicorn foodcourt.wsgi --log-file -
