@@ -3,7 +3,6 @@ from django.views.generic import View
 from django.http import HttpResponse, JsonResponse
 from StoreDetails.models import *
 import json
-import IPython
 
 # Create your views here.
 class GetStoreOrderQueue(View):
