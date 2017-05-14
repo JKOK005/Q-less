@@ -10,7 +10,7 @@ import json
 class UpdateSeatOccupancy(View):
 	@method_decorator(csrf_exempt)
 	def dispatch(self, *args, **kwargs):
-		return super(SeatAvailability, self).dispatch(*args, **kwargs)
+		return super(UpdateSeatOccupancy, self).dispatch(*args, **kwargs)
 
 	def post(self, request, *args, **kwargs):
 		try:

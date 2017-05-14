@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic import View, TemplateView
 from UpdateSeats.models import *
 from StoreDetails.models import FifoServiceQueue
 from django.http import HttpResponse, JsonResponse
@@ -35,3 +35,7 @@ class NotifySeatAvailable(View):
 		else:
 			json_dict["wait"] 	= 30
 		return JsonResponse(json_dict)
+
+# Main page view
+class GetMainView(TemplateView):	
+	template_name 				= "index.html"
