@@ -31,6 +31,17 @@ class NextOrderInQueue(View):
 			json_dict["to_prep"] 	= to_prep.food_menu.pk
 		return JsonResponse(json_dict)
 
+class MultiOrdersInQueue(View):
+	def get(self, request, *args, **kwargs):
+		json_dict 		= {"orders":[]}
+		store 			= StoreModels.objects.filter(pk=kwargs['store_id']).first()
+		orders_list 	= store.fifoservicequeue_set.order_by('time_stamp')[:10]
+		for each_order in orders_list:
+			json_dict["orders"].append(each_order.food_menu.pk)
+
+		return JsonResponse(json_dict)
+
+
 class RemoveStoreOrderQueue(View):
 	def get(self, request, *args, **kwargs):
 		store 			= StoreModels.objects.filter(pk=kwargs['store_id']).first()

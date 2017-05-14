@@ -1,176 +1,178 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <title>Qless - Demo</title>
+    <link rel="stylesheet" href="{% static 'Info/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Info/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'Info/css/bot-template.css' %}">
 
-        <title>Qless - Sho Japanese Cuisine</title>
+    <script src="{% static 'Info/js/jquery.js' %}"></script>
+    <script src="{% static 'Info/js/bootstrap.js' %}"></script>
+    <script src="{% static 'Info/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Info/js/bot-script.js' %}"></script>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="{% static 'Info/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-        <!-- Custom CSS -->
-        <link href="{% static 'Info/css/heroic-features.css' %}" rel="stylesheet">
-    </head>
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
 
 <body>
 
-    <!-- Navigation -->
-    <div id="dic_bubble" class="selection_bubble" style="z-index: 9999; visibility: hidden; top: 964px; left: 373px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-size: 13px; font-family: Helvetica;"><div class="selection_bubble_content"><div class="selection_bubble_word" id="selection_bubble_word"><img src="chrome-extension://epkhgmlgiomobdlofllfmoejgjdojknn/images/closeIcon.png" id="selection_bubble_close" align="right"><span style="font-weight:bold;padding-right:10px;">Website</span><span style="padding-right:5px;font-size:12px;"><img style="position: relative;top: 4px;display:inline;cursor:pointer;" src="chrome-extension://epkhgmlgiomobdlofllfmoejgjdojknn/images/Audioicon.png" id="playSound"></span><span class="selection_bubble_align_with_spearker">[<span style="padding-right:2px;"> <span class="dbus_pron_b">web</span>-sahyt</span>]</span><span id="soundBox">&nbsp;</span></div><div id="dic_bubble_difinition">		<i class="selection_bubble_title">noun [Digital Technology.]</i>		<div id="dic_bubble_dif" class="dic_dif"><div class="item"><div class="itemCount">1.</div><div class="itemData"> a connected group of pages on the World Wide Web regarded as a single entity, usually maintained by one person or organization and devoted to a single topic or several closely related topics.</div></div></div></div> <div id="dic_bubble_synonyms"></div><div id="selection_bubble_more_action">		<span>			<a href="http://app.dictionary.com/click/hbnm17?clkdest=http://dictionary.com/browse/Website" target="_blank">				<img src="chrome-extension://epkhgmlgiomobdlofllfmoejgjdojknn/images/more.png" alt="Dictionary More">			</a>		</span>		<a href="http://app.dictionary.com/click/rovvlr?clkdest=http://dictionary.com/" target="_blank">			<img style="position: relative;bottom: 5px;" src="chrome-extension://epkhgmlgiomobdlofllfmoejgjdojknn/images/pop-up_logo.png" align="right" alt="Dictionary.com">		</a> </div></div><div class="dic-arrow-above"></div><div class="dic-bubble-arrow-above" style="border-top:20px solid #ffffff"></div></div><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Q-LESS</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<ul>
+    <li><img src="{% static 'Info/images/qless.png' %}" style="width:100px;height:50px;"></li>
+    <li><a class="active" href="#home">Orders</a></li>
+    <li><a href="#news">Dashboard</a></li>
+</ul>
 
-    <!-- Page Content -->
+<div class="container">
+    <div class="row">
 
-			<!-- Jumbotron Header -->
-<div class="container">	   
-	<div class="row">
-		<div class="col-sm-8">
-			<h1>Kok Japanese Food</h1>
-			<h3>Now preparing...</h3>
-			<img src="images/ramen.png">
-			<h3>Shio Ramen Set A</h3>
-            <p><a class="btn btn-primary btn-large">Food Prepared!</a>
-            </p>
-		</div>
-		<div class="col-sm-3">
-			<div class="row"><h4> <h4>	</div>
-			<div class="row"><h4> <h4>	</div>
-			<div class="row"><h4> <h4>	</div>
-			<div class="row"><h4> <h4>	</div>
-			
-			<div class="row">
-				<h3>Next Orders<h3>
-			</div>
-			
-			<div class="row">
-				<div class="thumbnail">
-                    <img src="images/sushi.jpg">
-                    <div class="caption">
-                        <h4>Sushi Platter &nbsp 12min</h4>
-                        <p></p>
-					</div>
-				</div>
-			</div> 	
-
-			<div class="row">
-				<div class="thumbnail">
-                    <img src="images/ramen2.jpg">
-                    <div class="caption">
-                        <h4>Sushi Platter &nbsp 20min</h4>
-                        <p></p>
-					</div>
-				</div>
-			</div>	
-		</div>
-	</div>
-	
-        <hr>
-
-        <!-- Title -->
-        <div class="row">
-        </div>
-        <!-- /.row -->
-
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="images/sushi.jpg">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p></p>
-                        
-
+        <section class="content">
+            <h1>Sho's Japanese Restaurant</h1>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="pull-right">
+                        </div>
+                        <div class="table-container">
+                            <table class="table table-filter">
+                                <tbody id="page-main-body">
+                                    <tr data-status="pagado">
+                                        <div class="media">
+                                            <div class="row" style="width:700px;" id="first-in-queue">
+                                                <div class="col-md-3">
+                                                <a href="#" class="">
+                                                    <img src="{}" class="media-photo" id="first-queue-img" style="width:150px; height:150px;">
+                                                </a>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h4 class="title">
+                                                        To prepare:
+                                                        <span class="pagado" id="first-queue-name" style="color:green;">-</span>
+                                                    </h4>
+                                                    <br>
+                                                    <h4 class="title">
+                                                        Order ID:
+                                                        <span class="pagado" style="color:blue;">#0192</span>
+                                                    </h4>   
+                                                    <br>
+                                                    <h4 class="title">
+                                                        Special requests:
+                                                        <span class="pagado" style=""> - </span>
+                                                    </h4>   
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button" class="btn btn-danger" onclick="buttonClicked()" style="width:100%;">Order complete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="images/ramen2.jpg" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        <p></p>
-                        
-                    </div>
+                <div class="content-footer">
+                    <p>
+                        Qless - 2017 <br>
+                        Powered By Team REP </a>
+                    </p>
                 </div>
             </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-</div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Feature Label</h3>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright © Q-less 2017</p>
-                </div>
-            </div>
-        </footer>
-
+        </section>
     </div>
-    <!-- /.container -->
+</div>
 
-    <!-- jQuery -->
-    <script src="{% static 'Info/js/jquery.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.ajax({
+            type: "GET",
+            url: "/store-details/multi-queue-order/1/",
+            success: function(result) {
+                var orders_list         = result["orders"];
+                first_order             = orders_list[0];
+                next_orders             = orders_list.slice(1,orders_list.length);
+                updateTopImage(first_order);
+                updateOtherImage(next_orders);
+                console.log(orders_list);
+            },
+            error: function(result) {
+                console.log("Failed");
+            }
+        });
+    })
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'Info/js/bootstrap.min.js' %}"></script>
+    var food_menu_id        = { 
+                                1:{ "name":"Sushi platter",
+                                    "source":"static/Info/images/sushi.jpg"},
+                                2:{ "name":"Ramen bowl",
+                                    "source":"static/Info/images/ramen.png"}, 
+                            };
 
-</body></html>
+    function updateTopImage(img_id){
+        var first_queue_image          = document.getElementById("first-queue-img");
+        var first_queue_name           = document.getElementById("first-queue-name");
+
+        first_queue_image.src           = food_menu_id[img_id]["source"];
+        first_queue_name.textContent    = food_menu_id[img_id]["name"];
+    }
+
+    function deleteQueue(){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "store-details/remove-order/1", false);
+        xhr.send()
+        console.log(xhr.responseText);
+    }
+
+    function updateOtherImage(next_orders){
+        for (itr =0; itr <next_orders.length; itr++){
+            food_id         = next_orders[itr];
+            var string      = '<tr data-status="pagado"><div class="media"><div class="row" style="width:700px; opacity:0.4;"><div class="col-md-3"><a href="#" class=""><img src=" ' + food_menu_id[food_id]["source"] +' " class="media-photo"  style="width:150px; height:150px;"</a></div><div class="col-md-6"><h4 class="title">In Queue:<span class="pagado" style="color:green;">' + food_menu_id[food_id]["name"] + '</span></h4><br><h4 class="title">Order ID:<span class="pagado" style="color:blue;">#0193</span></h4><br><h4 class="title">Special requests:<span class="pagado" style=""> - </span></h4></div></div></div></tr>';
+            var div         = document.getElementById("page-main-body");
+            div.innerHTML   = div.innerHTML + string
+        }
+    }
+
+    function buttonClicked(id){
+        $.ajax({
+            type: "GET",
+            url: "/store-details/multi-queue-order/1/",
+            success: function(result) {
+                console.log(result["orders"])
+                deleteQueue();
+                window.location.reload();
+                
+            },
+            error: function(result) {
+                console.log("Failed");
+            }
+        });
+    }
+
+    // function buttonClicked(){
+    //     console.log(food_menu_id[2]["name"]);
+    // }
+</script>
