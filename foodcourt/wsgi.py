@@ -15,5 +15,7 @@ from whitenoise.django import DjangoWhiteNoise
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodcourt.settings")
 
 application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
+
+# Disable during local development
+# application = DjangoWhiteNoise(application)
 

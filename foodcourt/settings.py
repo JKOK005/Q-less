@@ -129,4 +129,6 @@ STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, '..', 'Info', 'static'),
 ]
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# Disable during local development
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
